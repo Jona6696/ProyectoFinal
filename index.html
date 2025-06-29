@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizzería & Empanadas JnL</title>
+    <link rel="icon" href="img/ICONO.png" type="image/png">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Frameworks y librerias -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fuente -->
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" 
+        rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#inicio">
+            <img src="img/ICONO.png" alt="Logo">
+            <span class="ms-2 fw-bold">Pizzería & Empanadas JnL</span>
+        </a>
+        <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" 
+                aria-expanded="false" 
+                aria-label="Alternar navegación">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- principal -->
+<section class="hero-section" id="inicio">
+    <img src="img/pizza.png" alt="Pizza" class="hero-image">
+    <div class="hero-content">
+        <h1>Probalas te van a Encantar</h1>
+        <p>Las mejores pizzas y empanadas artesanales hechas a la piedra</p>
+    </div>
+</section>
+
+<!-- Pizzas -->
+<section class="menu-section">
+    <div class="container">
+        <h2 class="section-title">Nuestras Pizzas</h2>
+        <div class="row" id="pizzas-container"></div>
+    </div>
+</section>
+
+<!-- Empanadas -->
+<section class="menu-section bg-white">
+    <div class="container">
+        <h2 class="section-title">Nuestras Empanadas</h2>
+        <div class="row" id="empanadas-container"></div>
+    </div>
+</section>
+
+<!-- Contacto -->
+<section class="contact-section" id="contacto">
+    <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <div class="mb-4">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Nuestra Ubicación</h4>
+                        <p>Av. Corrientes 1234, Buenos Aires, Argentina</p>
+                    </div>
+                    <div class="mb-4">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h4>Teléfono</h4>
+                        <p>+54 11 6827-9709</p>
+                    </div>
+                    <div class="mb-4">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/541168279709" target="_blank">+54 9 11 6827-9709</a></p>
+                    </div>
+                    <div class="mb-4">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p>Pizzería&EmpanadasJnL@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map-container">
+                    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7630390532283!2d-58.38414568476925!3d-34.6037385804607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacd7e0f8fa3%3A0xc305d2bfa9f9020!2sObelisco!5e0!3m2!1ses-419!2sar!4v1689796193739!5m2!1ses-419!2sar"
+                    width="100%" height="100%" style="border:0;" 
+                    allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/myzjplov" method="POST" novalidate>
+                    <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          name="name"
+                          placeholder="Nombre"
+                          required
+                        />
+                        <div class="invalid-feedback">Por favor ingrese su nombre</div>
+                    </div>
+                    <div class="form-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          name="email"
+                          placeholder="Email"
+                          required
+                        />
+                        <div class="invalid-feedback">Por favor ingrese un email válido</div>
+                    </div>
+                    <div class="form-group">
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="phone"
+                          name="phone"
+                          placeholder="Teléfono"
+                          required
+                        />
+                        <div class="invalid-feedback">Por favor ingrese su teléfono</div>
+                    </div>
+                    <div class="form-group">
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          name="message"
+                          rows="4"
+                          placeholder="Mensaje"
+                          required
+                        ></textarea>
+                        <div class="invalid-feedback">Por favor ingrese un mensaje</div>
+                    </div>
+                    <div id="form-alert" class="alert d-none"></div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <div class="social-icons mb-4">
+            <a href="https://www.facebook.com/" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/" class="youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-links mb-3">
+            <a href="javascript:void(0)">Términos y Condiciones</a>
+            <a href="javascript:void(0)">Política de Privacidad</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Pizzería JnL - Todos los derechos reservados
+        </div>
+    </div>
+</footer>
+
+<div class="cart-icon" id="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <div class="cart-count" id="cart-count">0</div>
+</div>
+
+<!--Carrito -->
+<div class="cart-modal" id="cart-modal">
+    <div class="cart-modal-content">
+        <span id="close-cart" class="close-cart">&times;</span>
+        <h3 class="mb-4">Tu Pedido</h3>
+        <div id="cart-items"></div>
+        <div id="cart-empty" class="empty-cart-message">
+            <p>Tu carrito está vacío</p>
+            <p>Agrega productos para comenzar tu pedido</p>
+        </div>
+        <div id="cart-footer" class="d-none">
+            <div class="cart-total mb-3">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <div id="checkout-form" class="mb-3">
+                <input type="text" id="checkout-name" class="form-control mb-2" placeholder="Tu Nombre" required />
+                <input type="email" id="checkout-email" class="form-control mb-2" placeholder="Tu Email" required />
+                <input type="tel" id="checkout-phone" class="form-control mb-2" placeholder="Tu Teléfono" required />
+                <input type="text" id="checkout-address" class="form-control mb-2" placeholder="Dirección de entrega" required />
+            </div>
+            <div id="checkout-alert" class="alert d-none mb-2"></div>
+            <button id="checkout-btn" class="checkout-btn">Finalizar Pedido</button>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
